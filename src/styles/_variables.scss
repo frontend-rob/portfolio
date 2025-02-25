@@ -1,0 +1,21 @@
+[data-theme="light"] {
+    --bg-base-100: #f8fafc;
+    --bg-base-200: #ffffff;
+    --bg-neutral-100: #e2e8f0;
+    --bg-neutral-200: #cbd5e1;
+    --bg-primary: #2cc99c;
+    --text-primary: #0a0a0a;
+    --text-secondary: #0a0a0a;
+    --text-inverse: #f8fafc;
+}
+
+[data-theme="dark"] {
+    --bg-base-100: #0b0b0d;
+    --bg-base-200: #111116;
+    --bg-neutral-100: #191920;
+    --bg-neutral-200: #2c2c35;
+    --bg-primary: #b5ff6d;
+    --text-primary: #d4d4d8;
+    --text-secondary: #a1a1aa;
+    --text-inverse: #0b0b0d;
+}

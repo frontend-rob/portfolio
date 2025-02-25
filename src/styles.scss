@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./styles/variables";
+@use "./styles/scrollbar";
+@use "./styles/fonts";
+@use "./styles/buttons";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-base-100);
+    font-family: 'Satoshi', sans-serif;
+    transition: background-color 250ms ease, color 250ms ease;
+}
+

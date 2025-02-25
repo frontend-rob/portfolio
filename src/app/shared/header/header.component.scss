@@ -1,0 +1,181 @@
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 1rem 0;
+    max-width: 80rem;
+    width: 100%;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: 'Clash Display';
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    font-size: 1rem;
+    gap: 2rem;
+}
+
+.nav-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link.active-link {
+    color: var(--text-primary);
+}
+
+.nav-link.active-link .text-default {
+    color: var(--text-primary);
+}
+
+.hover-effect {
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-default,
+.text-hover {
+    transition: transform 0.5s ease;
+}
+
+.text-default {
+    transform: translateY(0) skewY(0);
+    color: var(--text-secondary);
+}
+
+.text-hover {
+    transform: translateY(120%) skewY(16deg);
+    color: var(--text-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav-item:hover .text-default {
+    transform: translateY(-120%) skewY(16deg);
+}
+
+.nav-item:hover .text-hover {
+    transform: translateY(0) skewY(0);
+}
+
+.active-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--text-primary);
+    transition: all .1s ease;
+}
+
+.active-link:before {
+    content: "\00a0";
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+}
+
+@keyframes moon-hover-animation {
+    0% {
+        transform: rotate(14deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    75% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.btn-theme:hover #moon-icon {
+    animation: moon-hover-animation 750ms ease-in-out;
+}
+
+@keyframes sun-path-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.btn-theme:hover #sun-icon path {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: center;
+    animation: sun-path-animation 0.2s ease-in-out forwards;
+}
+
+.btn-theme:hover #sun-icon path:first-child {
+    opacity: 1;
+}
+
+.btn-theme:hover #sun-icon path:nth-child(2) {
+    animation-delay: 0s;
+}
+
+.btn-theme:hover #sun-icon path:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.btn-theme:hover #sun-icon path:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.btn-theme:hover #sun-icon path:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.btn-theme:hover #sun-icon path:nth-child(6) {
+    animation-delay: 0.4s;
+}
+
+.btn-theme:hover #sun-icon path:nth-child(7) {
+    animation-delay: 0.5s;
+}
+
+.btn-theme:hover #sun-icon path:nth-child(8) {
+    animation-delay: 0.6s;
+}
+
+.btn-theme:hover #sun-icon path:last-child {
+    animation-delay: 0.7s;
+}

@@ -1,13 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/header/header.component';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet],
+    imports: [
+        RouterOutlet,
+        HeaderComponent
+    ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
 
-export class AppComponent {
-    title = 'portfolio';
+export class AppComponent implements OnInit {
+    theme: string | undefined;
+
+    ngOnInit(): void {
+        this.initializeTheme();
+    }
+
+    initializeTheme(): void {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            this.theme = savedTheme;
+        } else {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            this.theme = prefersDark ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', this.theme);
+    }
 }

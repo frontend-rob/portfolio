@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../../public/fonts/Satoshi-Variable.ttf');
+}
+
+@font-face {
+    font-family: 'Clash Display';
+    src: url('../../public/fonts/ClashDisplay-Variable.ttf');
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: pretty;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+a {
+    text-decoration: none;
+}
