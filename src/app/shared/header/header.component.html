@@ -1,49 +1,49 @@
-<header>
-    <nav>
-        <a routerLink="/" class="logo">RG</a>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a routerLink="/" [ngClass]="{'active-link': isActive('/')}" class="nav-link">
-                    <span class="hover-effect">
-                        <span class="text-default">About</span>
-                        <span class="text-hover">About</span>
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a routerLink="/projects" [ngClass]="{'active-link': isActive('/projects')}" class="nav-link">
-                    <span class="hover-effect">
-                        <span class="text-default">Projects</span>
-                        <span class="text-hover">Projects</span>
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a routerLink="/contact" [ngClass]="{'active-link': isActive('/contact')}" class="nav-link">
-                    <span class="hover-effect">
-                        <span class="text-default">Contact</span>
-                        <span class="text-hover">Contact</span>
-                    </span>
-                </a>
-            </li>
-        </ul>
-        <button class="btn btn-circle btn-theme" (click)="toggleTheme()">
-            <svg *ngIf="theme === 'dark'" id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon">
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-            </svg>
-            <svg *ngIf="theme === 'light'" id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun">
-                <circle cx="12" cy="12" r="4" />
-                <path opacity="1" d="M12 2v2" />
-                <path opacity="1" d="m19.07 4.93-1.41 1.41" />
-                <path opacity="1" d="M20 12h2" />
-                <path opacity="1" d="m17.66 17.66 1.41 1.41" />
-                <path opacity="1" d="M12 20v2" />
-                <path opacity="1" d="m6.34 17.66-1.41 1.41" />
-                <path opacity="1" d="M2 12h2" />
-                <path opacity="1" d="m4.93 4.93 1.41 1.41" />
-            </svg>
-        </button>
-    </nav>
-</header>
+<nav>
+    <a routerLink="/" class="logo">RG</a>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a routerLink="/" [ngClass]="{'active-link': isActive('/')}" class="nav-link">
+                <span class="hover-effect">
+                    <span class="text-default">About</span>
+                    <span class="text-hover">About</span>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/projects" [ngClass]="{'active-link': isActive('/projects')}" class="nav-link">
+                <span class="hover-effect">
+                    <span class="text-default">Projects</span>
+                    <span class="text-hover">Projects</span>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/contact" [ngClass]="{'active-link': isActive('/contact')}" class="nav-link">
+                <span class="hover-effect">
+                    <span class="text-default">Contact</span>
+                    <span class="text-hover">Contact</span>
+                </span>
+            </a>
+        </li>
+    </ul>
+    <button class="btn btn-circle btn-theme" (click)="toggleTheme()">
+        <svg *ngIf="theme === 'dark'" id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-moon">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+        <svg *ngIf="theme === 'light'" id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="lucide lucide-sun">
+            <circle cx="12" cy="12" r="4" />
+            <path opacity="1" d="M12 2v2" />
+            <path opacity="1" d="m19.07 4.93-1.41 1.41" />
+            <path opacity="1" d="M20 12h2" />
+            <path opacity="1" d="m17.66 17.66 1.41 1.41" />
+            <path opacity="1" d="M12 20v2" />
+            <path opacity="1" d="m6.34 17.66-1.41 1.41" />
+            <path opacity="1" d="M2 12h2" />
+            <path opacity="1" d="m4.93 4.93 1.41 1.41" />
+        </svg>
+    </button>
+</nav>

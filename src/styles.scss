@@ -18,15 +18,20 @@ html {
     transition: background-color 250ms ease, color 250ms ease;
 }
 
-body {
+app-root {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    height: 100%;
     background-color: var(--bg-base-100);
     font-family: 'Satoshi', sans-serif;
     color: var(--text-secondary);
     transition: background-color 250ms ease, color 250ms ease;
 }
 
-main {
+app-about,
+app-projects,
+app-contact {
     display: flex;
     flex-direction: column;
     max-width: 80rem;
@@ -34,4 +39,5 @@ main {
     margin: auto;
     padding: 4rem 2rem;
     gap: 3rem;
+    flex: 1;
 }

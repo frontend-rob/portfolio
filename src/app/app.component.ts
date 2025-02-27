@@ -11,7 +11,11 @@ import { FooterComponent } from './shared/footer/footer.component';
         FooterComponent
     ],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+    styleUrls: [
+        './app.component.scss',
+        './shared/header/header.component.scss',
+        './shared/footer/footer.component.scss',
+        ]
 })
 
 export class AppComponent implements OnInit {
