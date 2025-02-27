@@ -1,17 +1,23 @@
+@use '../../../styles/animations';
+
 header {
     position: sticky;
     top: 0;
     left: 0;
     padding: 1rem 0;
-    max-width: 80rem;
+    max-width: 90rem;
     width: 100%;
     margin: auto;
+    user-select: none;
+    animation: fadeIn-top-down 350ms ease-in-out;
+    z-index: 100;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 2.75rem;
     padding: 0 2rem;
 }
 
@@ -97,51 +103,18 @@ nav {
     width: 6px !important;
     height: 6px !important;
     border-radius: 50%;
-    background-color: var(--bg-primary);
-}
-
-@keyframes moon-hover-animation {
-    0% {
-        transform: rotate(14deg);
-    }
-    25% {
-        transform: rotate(-10deg);
-    }
-    50% {
-        transform: rotate(8deg);
-    }
-    75% {
-        transform: rotate(-4deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+    background-color: var(--primary);
 }
 
 .btn-theme:hover #moon-icon {
-    animation: moon-hover-animation 750ms ease-in-out;
-}
-
-@keyframes sun-path-animation {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    50% {
-        opacity: 0.2;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    animation: hover-dark-toogle 750ms ease-in-out;
 }
 
 .btn-theme:hover #sun-icon path {
     opacity: 0;
     transform: scale(0);
     transform-origin: center;
-    animation: sun-path-animation 0.2s ease-in-out forwards;
+    animation: hover-light-toogle 200ms ease-in-out forwards;
 }
 
 .btn-theme:hover #sun-icon path:first-child {
@@ -153,29 +126,29 @@ nav {
 }
 
 .btn-theme:hover #sun-icon path:nth-child(3) {
-    animation-delay: 0.1s;
+    animation-delay: 50ms;
 }
 
 .btn-theme:hover #sun-icon path:nth-child(4) {
-    animation-delay: 0.2s;
+    animation-delay: 100ms;
 }
 
 .btn-theme:hover #sun-icon path:nth-child(5) {
-    animation-delay: 0.3s;
+    animation-delay: 150ms;
 }
 
 .btn-theme:hover #sun-icon path:nth-child(6) {
-    animation-delay: 0.4s;
+    animation-delay: 200ms;
 }
 
 .btn-theme:hover #sun-icon path:nth-child(7) {
-    animation-delay: 0.5s;
+    animation-delay: 250ms;
 }
 
 .btn-theme:hover #sun-icon path:nth-child(8) {
-    animation-delay: 0.6s;
+    animation-delay: 300ms;
 }
 
 .btn-theme:hover #sun-icon path:last-child {
-    animation-delay: 0.7s;
+    animation-delay: 350ms;
 }

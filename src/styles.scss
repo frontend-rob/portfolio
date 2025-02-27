@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: var(--primary);
+    color: var(--text-inverse);
+}
+
 html {
     transition: background-color 250ms ease, color 250ms ease;
 }
@@ -17,6 +22,16 @@ body {
     min-height: 100vh;
     background-color: var(--bg-base-100);
     font-family: 'Satoshi', sans-serif;
+    color: var(--text-secondary);
     transition: background-color 250ms ease, color 250ms ease;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 90rem;
+    width: 100%;
+    margin: auto;
+    padding: 4rem 2rem;
+    gap: 3rem;
+}

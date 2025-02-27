@@ -1,0 +1,53 @@
+// navbar animation
+@keyframes fadeIn-top-down {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// theme button animation (dark icon)
+@keyframes hover-dark-toogle {
+    0% {
+        transform: rotate(16deg);
+    }
+
+    25% {
+        transform: rotate(-12deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+
+    75% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+// theme button animation (light icon)
+@keyframes hover-light-toogle {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
