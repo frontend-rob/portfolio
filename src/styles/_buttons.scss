@@ -23,7 +23,7 @@
 
 .btn {
     @include button-base;
-    background-color: var(--bg-base-100);
+    background-color: var(--backdrop);
 }
 
 .btn>svg {

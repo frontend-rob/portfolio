@@ -1,7 +1,10 @@
 .hero-marquee {
     display: flex;
     align-items: center;
+    max-width: 120rem;
+    width: 100%;
     height: 6rem;
+    margin: 0 auto;
     border-top: 1px solid var(--bg-neutral-100);
     border-bottom: 1px solid var(--bg-neutral-100);
 }

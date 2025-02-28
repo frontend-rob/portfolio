@@ -37,11 +37,6 @@ app-projects,
 app-contact {
     display: flex;
     flex-direction: column;
-    max-width: 80rem;
-    width: 100%;
-    margin: auto;
-    padding: 5rem 2rem;
-    gap: 5rem;
     flex: 1;
     animation: fadeIn-main-content 1000ms ease-in-out;
 }

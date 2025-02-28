@@ -3,18 +3,20 @@ app-header {
     top: 0;
     left: 0;
     padding: 1rem 0;
-    max-width: 80rem;
-    width: 100%;
-    margin: 0 auto;
+    background-color: var(--backdrop);
+    backdrop-filter: blur(.75rem);
+    z-index: 100;
     user-select: none;
     animation: fadeIn-top-down 500ms ease-in-out;
-    z-index: 100;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
     height: 2.75rem;
     padding: 0 2rem;
 }

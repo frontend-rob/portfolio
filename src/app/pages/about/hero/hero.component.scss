@@ -1,6 +1,10 @@
 .hero-section {
     display: flex;
     align-items: center;
+    max-width: 80rem;
+    width: 100%;
+    margin: auto;
+    padding: 7rem 2rem;
     gap: 4rem;
 
     .hero-picture {
