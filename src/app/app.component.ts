@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
     imports: [
+        CommonModule,
         RouterOutlet,
         HeaderComponent,
         FooterComponent
@@ -20,19 +22,40 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 export class AppComponent implements OnInit {
     theme: string | undefined;
+    showContent: boolean = false;
+
+    constructor(private router: Router) {}
 
     ngOnInit(): void {
         this.initializeTheme();
     }
 
     initializeTheme(): void {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            this.theme = savedTheme;
-        } else {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            this.theme = prefersDark ? 'dark' : 'light';
-        }
-        document.documentElement.setAttribute('data-theme', this.theme);
+        this.theme = this.getSavedTheme() || this.getPreferredTheme();
+        this.applyTheme(this.theme);
+    }
+
+    getSavedTheme(): string | null {
+        return localStorage.getItem('theme');
+    }
+
+    getPreferredTheme(): string {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    applyTheme(theme: string): void {
+        document.documentElement.setAttribute('data-theme', theme);
+    }
+
+    onHeaderAnimationDone(): void {
+        this.showContent = true;
+        this.router.events.subscribe(event => {
+            if (event instanceof NavigationEnd) {
+                this.showContent = false;
+                setTimeout(() => {
+                    this.showContent = true;
+                });
+            }
+        });
     }
 }

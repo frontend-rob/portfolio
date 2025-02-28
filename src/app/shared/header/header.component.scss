@@ -107,14 +107,14 @@ nav {
 }
 
 .btn-theme:hover #moon-icon {
-    animation: hover-dark-toogle 750ms ease-in-out;
+    animation: hover-dark-toggle 750ms ease-in-out;
 }
 
 .btn-theme:hover #sun-icon path {
     opacity: 0;
     transform: scale(0);
     transform-origin: center;
-    animation: hover-light-toogle 200ms ease-in-out forwards;
+    animation: hover-light-toggle 200ms ease-in-out forwards;
 }
 
 .btn-theme:hover #sun-icon path:first-child {

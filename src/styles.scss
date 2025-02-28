@@ -2,6 +2,9 @@
 @use "./styles/scrollbar";
 @use "./styles/fonts";
 @use "./styles/buttons";
+@use "./styles/inputs";
+@use "./styles/animations";
+
 
 * {
     margin: 0;
@@ -14,9 +17,12 @@
     color: var(--text-inverse);
 }
 
-html {
+html,
+body {
     transition: background-color 250ms ease, color 250ms ease;
+    overscroll-behavior: none;
 }
+
 
 app-root {
     display: flex;
@@ -40,4 +46,5 @@ app-contact {
     padding: 4rem 2rem;
     gap: 3rem;
     flex: 1;
+    animation: fadeIn-main-content 1500ms ease-in-out;
 }
