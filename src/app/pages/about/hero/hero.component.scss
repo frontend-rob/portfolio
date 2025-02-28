@@ -1,0 +1,58 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    .hero-picture {
+        max-width: 25rem;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 9999rem;
+        border: 0.125rem solid var(--bg-neutral-100);
+    }
+
+    .hero-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    .hero-greeting {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .hero-greeting svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--primary);
+        animation: greeting 2500ms infinite;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-headline {
+        font-family: 'Clash Display';
+        font-size: 4.5rem;
+        line-height: 1;
+        text-wrap: balance;
+    }
+
+    .hero-subheadline {
+        text-wrap: balance;
+    }
+
+    .hero-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}

@@ -1,11 +1,29 @@
-.btn {
+@mixin button-base {
     display: inline-flex;
     align-items: center;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
     gap: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    background-color: var(--bg-base-100);
     border: unset;
+    border-radius: 9990rem;
+    font-weight: 500;
     cursor: pointer;
+    user-select: none;
+}
+
+@mixin button-hover($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    transition: 125ms ease-in-out;
+
+    svg {
+        color: $text-color;
+    }
+}
+
+.btn {
+    @include button-base;
+    background-color: var(--bg-base-100);
 }
 
 .btn>svg {
@@ -14,6 +32,21 @@
     color: var(--text-primary);
 }
 
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-neutral {
+    background-color: var(--bg-neutral-100);
+}
+
+.btn-neutral:hover {
+    @include button-hover(var(--text-primary), var(--text-inverse));
+}
+
+.btn-primary:hover {
+    @include button-hover(var(--bg-neutral-100), var(--text-primary));
+}
 
 .btn-circle {
     border-radius: 50%;
