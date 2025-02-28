@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
     startAnimation(): void {
         setTimeout(() => {
             this.onAnimationDone();
-        }, 1000);
+        }, 1250);
     }
 
     onAnimationDone(): void {
