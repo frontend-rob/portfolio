@@ -10,8 +10,8 @@ import { FooterCtaComponent } from '../../shared/footer-cta/footer-cta.component
     selector: 'app-about',
     imports: [
         HeroComponent,
-        ProfileComponent,
         SkillsetComponent,
+        ProfileComponent,
         SpotlightComponent,
         TestimonialsComponent,
         FooterCtaComponent
