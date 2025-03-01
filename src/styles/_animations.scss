@@ -1,11 +1,11 @@
 // navbar animation
 @keyframes fadeIn-top-down {
-    0% {
+    from {
         transform: translateY(-3rem);
         opacity: 0;
     }
 
-    100% {
+    to {
         transform: translateY(0);
         opacity: 1;
     }
@@ -63,8 +63,9 @@
     }
 }
 
+// greeting icon animation
 @keyframes greeting {
-0% {
+    0% {
         transform: rotate(0deg)
     }
 
@@ -94,5 +95,16 @@
 
     to {
         transform: rotate(0deg)
+    }
+}
+
+// marquee animation
+@keyframes hero-marquee {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
     }
 }
