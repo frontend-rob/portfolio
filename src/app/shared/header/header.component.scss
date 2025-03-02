@@ -106,49 +106,11 @@ nav {
     background-color: var(--primary);
 }
 
-.btn-theme:hover #moon-icon {
-    animation: hover-dark-toggle 750ms ease-in-out;
+.btn-theme #moon-icon {
+    animation: dark-toggle-rotate 500ms ease-in-out;
 }
 
-.btn-theme:hover #sun-icon path {
-    opacity: 0;
-    transform: scale(0);
-    transform-origin: center;
-    animation: hover-light-toggle 200ms ease-in-out forwards;
-}
 
-.btn-theme:hover #sun-icon path:first-child {
-    opacity: 1;
-}
-
-.btn-theme:hover #sun-icon path:nth-child(2) {
-    animation-delay: 0s;
-}
-
-.btn-theme:hover #sun-icon path:nth-child(3) {
-    animation-delay: 50ms;
-}
-
-.btn-theme:hover #sun-icon path:nth-child(4) {
-    animation-delay: 100ms;
-}
-
-.btn-theme:hover #sun-icon path:nth-child(5) {
-    animation-delay: 150ms;
-}
-
-.btn-theme:hover #sun-icon path:nth-child(6) {
-    animation-delay: 200ms;
-}
-
-.btn-theme:hover #sun-icon path:nth-child(7) {
-    animation-delay: 250ms;
-}
-
-.btn-theme:hover #sun-icon path:nth-child(8) {
-    animation-delay: 300ms;
-}
-
-.btn-theme:hover #sun-icon path:last-child {
-    animation-delay: 350ms;
+.btn-theme #sun-icon {
+    animation: light-toggle-rotate 500ms ease-in-out;
 }
