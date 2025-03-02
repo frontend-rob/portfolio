@@ -6,7 +6,7 @@
     gap: 0.5rem;
     border: unset;
     border-radius: 9990rem;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     user-select: none;
 }
@@ -14,7 +14,6 @@
 @mixin button-hover($bg-color, $text-color) {
     background-color: $bg-color;
     color: $text-color;
-    transition: 125ms ease-in-out;
 
     svg {
         color: $text-color;
@@ -23,13 +22,14 @@
 
 .btn {
     @include button-base;
-    background-color: var(--backdrop);
-}
+    background-color: var(--text-primary);
+    color: var(--text-inverse);
 
-.btn>svg {
-    height: 1.25rem;
-    width: 1.25rem;
-    color: var(--text-primary);
+    svg {
+        height: 1.25rem;
+        width: 1.25rem;
+        color: var(--text-inverse);
+    }
 }
 
 .btn:active {
@@ -37,23 +37,36 @@
 }
 
 .btn:hover {
-    background-color: var(--bg-neutral-100);
+    background-color: color-mix(in srgb, var(--text-primary) 90%, transparent 10%);
 }
 
-.btn-neutral {
-    background-color: var(--bg-neutral-100);
+.btn-ghost {
+    background-color: var(--backdrop);
+    color: var(--text-primary);
+
+    svg {
+        color: var(--text-primary);
+    }
 }
 
-.btn-neutral:hover {
-    @include button-hover(var(--text-primary), var(--text-inverse));
+.btn-ghost:hover {
+    @include button-hover(var(--bg-neutral-100), var(--text-primary));
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-inverse);
+
+    svg {
+        color: var(--text-inverse);
+    }
 }
 
 .btn-primary:hover {
-    @include button-hover(var(--bg-neutral-100), var(--text-primary));
+    @include button-hover(color-mix(in srgb, var(--primary) 90%, transparent 10%), var(--text-inverse));
 }
 
 .btn-circle {
     border-radius: 50%;
     padding: 0.5rem;
 }
-

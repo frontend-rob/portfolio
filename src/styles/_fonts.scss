@@ -47,6 +47,7 @@ a {
     font-size: 2.5rem;
     font-family: 'Clash Display';
     color: var(--text-primary);
+    text-wrap: balance;
 }
 
 .section-subtite {
@@ -54,4 +55,10 @@ a {
     font-family: 'Satoshi';
     color: var(--text-secondary);
     text-wrap: balance;
+}
+
+.badge-text {
+    font-size: .75rem;
+    font-family: 'Satoshi';
+    color: var(--text-primary);
 }

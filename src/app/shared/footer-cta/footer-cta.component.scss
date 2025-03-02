@@ -1,7 +1,58 @@
 .footer-card {
-    display: flex;
-    padding: 5rem 2rem;
     max-width: 80rem;
     width: 100%;
+    padding: 2rem 2rem;
     margin: 0 auto;
+
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 80rem;
+        width: 100%;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        gap: 2rem;
+        background-color: var(--bg-base-200);
+        text-align: center;
+    }
+
+    .footer-badge {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: .5rem 1rem;
+        border-radius: 9999rem;
+        gap: .5rem;
+        background-color: color-mix(in srgb, var(--primary) 10%, transparent 100%);
+        user-select: none;
+
+        .indicator {
+            position: relative;
+            width: .375rem;
+            height: .375rem;
+            border-radius: 9999rem;
+            background-color: var(--primary);
+        }
+
+        .indicator-pulse {
+            position: absolute;
+            width: .375rem;
+            height: .375rem;
+            border-radius: 9999rem;
+            background-color: var(--primary);
+            animation: pulse 1500ms ease infinite;
+        }
+
+        .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+        }
+    }
+
+    .footer-title {
+        max-width: 30rem;
+    }
 }

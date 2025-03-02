@@ -108,3 +108,13 @@
         transform: translateX(-50%);
     }
 }
+
+// pulsing badge animation
+@keyframes pulse {
+
+    75%,
+    to {
+        transform: scale(2.25);
+        opacity: 0
+    }
+}
