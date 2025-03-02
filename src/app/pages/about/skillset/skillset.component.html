@@ -1,8 +1,10 @@
 <section class="skillset-section">
-    <div class="scrolling-text">
+    <div class="marquee-text">
         <div class="skill-item" *ngFor="let skill of skillSetList">
             <img [src]="skill.img" [alt]="skill.text">
             {{ skill.text }}
         </div>
     </div>
+    <div class="marquee-fade marquee-fade-left"></div>
+    <div class="marquee-fade marquee-fade-right"></div>
 </section>

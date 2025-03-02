@@ -18,7 +18,10 @@
 
 html,
 body {
+    scroll-behavior: smooth;
     overscroll-behavior: none;
+    will-change: scroll-position;
+    text-rendering: optimizeLegibility;
 }
 
 app-root {
@@ -38,4 +41,10 @@ app-contact {
     flex-direction: column;
     flex: 1;
     animation: fadeIn-main-content 1000ms ease-in-out;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
 }
