@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 500ms ease;
 }
 
 ::selection {
@@ -22,6 +23,7 @@ body {
     overscroll-behavior: none;
     will-change: scroll-position;
     text-rendering: optimizeLegibility;
+    background-color: var(--bg-base-100);
 }
 
 app-root {
@@ -39,6 +41,7 @@ app-projects,
 app-contact {
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-base-100);
     flex: 1;
     animation: fadeIn-main-content 1000ms ease-in-out;
 }
