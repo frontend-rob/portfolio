@@ -39,6 +39,22 @@
 
 .btn:hover {
     background-color: color-mix(in srgb, var(--text-primary) 90%, transparent 10%);
+    transition: 125ms ease;
+}
+
+.btn-neutral {
+    background-color: var(--bg-base-200);
+    color: var(--text-primary);
+
+    svg {
+        color: var(--text-primary);
+        transition: none;
+    }
+}
+
+.btn-neutral:hover {
+    @include button-hover(var(--bg-neutral-100), var(--text-primary));
+    transition: 125ms ease;
 }
 
 .btn-ghost {
@@ -53,6 +69,7 @@
 
 .btn-ghost:hover {
     @include button-hover(var(--bg-neutral-100), var(--text-primary));
+    transition: 125ms ease;
 }
 
 .btn-primary {
@@ -67,9 +84,18 @@
 
 .btn-primary:hover {
     @include button-hover(color-mix(in srgb, var(--primary) 90%, transparent 10%), var(--text-inverse));
+    transition: 125ms ease;
 }
 
 .btn-circle {
-    border-radius: 50%;
+    @include button-base;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
     padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.btn-outline {
+    border: 1px solid var(--bg-neutral-100);
 }

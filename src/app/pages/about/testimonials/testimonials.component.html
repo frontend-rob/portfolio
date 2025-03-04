@@ -13,7 +13,59 @@
         </span>
         <h2 class="section-title">What others say</h2>
         <span class="section-subtite">
-            I've worked with some amazing people, here is what they say about me.
+            Collaborating with amazing people has been a joy - here’s what they say about me.
         </span>
+    </div>
+    <div class="testimonial-wrapper">
+        <div class="testimonial-carousel">
+            <div class="testimonial-track"
+                [ngClass]="direction" [class.no-transition]="!transitionEnabled"
+                [style.transform]="getTransform()">
+                <div class="testimonial-card"
+                    *ngFor="let testimonialItem of loopedTestimonials; let i = index"
+                    [class.duplicate]="i === 0 || i === loopedTestimonials.length - 1">
+                    <div class="testimonial-header">
+                        <div class="testimonial-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-terminal">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" x2="20" y1="19" y2="19" />
+                            </svg>
+                        </div>
+                        <div class="collaborator-info">
+                            <span class="collaborator-name">{{ testimonialItem.name }}</span>
+                            <span class="collaborator-role">{{ testimonialItem.role }}</span>
+                        </div>
+                    </div>
+                    <span #testimonialContent class="testimonial-content"
+                        [ngClass]="{'expanded': expanded}">
+                        {{ testimonialItem.testimonial }}
+                    </span>
+                    <button class="btn btn-link" *ngIf="isOverflowing[i]" (click)="toggleExpand()">
+                        {{ expanded ? 'show less' : 'see more' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="testimonals-control">
+            <button class="btn btn-neutral btn-circle btn-outline" (click)="prevPage()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-left">
+                    <path d="m12 19-7-7 7-7" />
+                    <path d="M19 12H5" />
+                </svg>
+            </button>
+            <span class="pagination-count">{{ getDisplayPage() }} / {{ testimonials.length }}</span>
+            <button class="btn btn-neutral btn-circle btn-outline" (click)="nextPage()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-right">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                </svg>
+            </button>
+        </div>
     </div>
 </section>
