@@ -14,7 +14,7 @@
 // dark mode animation
 @keyframes dark-toggle-rotate {
     0% {
-        transform: scale(.7) rotate(0deg);
+        transform: scale(.4) rotate(0deg);
     }
 
     100% {
@@ -25,7 +25,7 @@
 // light mode animation
 @keyframes light-toggle-rotate {
     0% {
-        transform: scale(.7) rotate(0deg);
+        transform: scale(.4) rotate(0deg);
     }
 
     100% {
@@ -86,7 +86,7 @@
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -97,5 +97,16 @@
     to {
         transform: scale(2.25);
         opacity: 0
+    }
+}
+
+// draw border animation
+@keyframes draw-border {
+    from {
+        --fill: 0%;
+    }
+
+    to {
+        --fill: 100%;
     }
 }

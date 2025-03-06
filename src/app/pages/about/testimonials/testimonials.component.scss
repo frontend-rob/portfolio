@@ -56,16 +56,39 @@
 }
 
 .testimonial-icon {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 4rem;
     height: 4rem;
+    aspect-ratio: 1;
     padding: 0.5rem;
     border-radius: 50%;
     background-color: var(--bg-neutral-100);
-    position: relative;
-    overflow: hidden;
+    color: var(--text-secondary);
+}
+
+@property --fill {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
+
+.testimonial-icon::before,
+.testimonial-icon::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    inset: -2px;
+    border-radius: inherit;
+    background: conic-gradient(currentColor var(--fill), transparent var(--fill));
+    transition: --fill 12s linear;
+}
+
+.testimonial-icon.active::before,
+.testimonial-icon.active::after {
+    animation: draw-border 12s linear forwards;
 }
 
 .testimonial-icon svg {

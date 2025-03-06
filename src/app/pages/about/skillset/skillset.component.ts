@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-skillset',
@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
     templateUrl: './skillset.component.html',
     styleUrl: './skillset.component.scss'
 })
-
-export class SkillsetComponent {
+export class SkillsetComponent implements OnInit {
     skills: { text: string, img: string }[] = [
         { text: 'HTML', img: 'skills/html.svg' },
         { text: 'CSS', img: 'skills/css.svg' },
@@ -19,15 +18,38 @@ export class SkillsetComponent {
         { text: 'Angular', img: 'skills/angular.svg' },
         { text: 'Firebase', img: 'skills/firebase.svg' },
         { text: 'Git', img: 'skills/git.svg' },
-        { text: 'Figma', img: 'skills/figma.svg' },
+        { text: 'GitHub', img: '' },
+        { text: 'Stylelint', img: '' },
+        { text: 'Figma', img: 'skills/figma.svg' }
     ];
 
-    get skillSetList(): { text: string, img: string }[] {
-        const repetitions = 3;
-        let items: { text: string, img: string }[] = [];
-        for (let i = 0; i < repetitions; i++) {
-            items = items.concat(this.skills);
+    ngOnInit(): void {
+
+        this.updateIcons();
+        const themeObserver = new MutationObserver(() => {
+            this.updateIcons();
+        });
+
+        themeObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+    }
+
+    private updateIcons(): void {
+        const theme = document.documentElement.getAttribute('data-theme');
+        this.updateIcon('GitHub', theme === 'dark' ? 'skills/github-light.svg' : 'skills/github-dark.svg');
+        this.updateIcon('Stylelint', theme === 'dark' ? 'skills/stylelint-light.svg' : 'skills/stylelint-dark.svg');
+    }
+
+    private updateIcon(skillName: string, iconPath: string): void {
+        const skillIndex = this.skills.findIndex(skill => skill.text === skillName);
+        if (skillIndex !== -1) {
+            this.skills[skillIndex].img = iconPath;
         }
-        return items;
+    }
+
+    get skillSetList(): { text: string, img: string }[] {
+        return this.skills;
     }
 }

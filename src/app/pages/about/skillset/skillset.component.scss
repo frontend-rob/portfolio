@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    max-width: 95rem;
+    max-width: 90rem;
     width: 100%;
     padding: 2rem 0;
     margin: 0 auto;
@@ -11,13 +11,30 @@
     background-color: var(--bg-base-100);
     overflow: hidden;
     user-select: none;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0) 100%);
+
+    .marquee-wrapper {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
 
     .marquee-text {
         display: flex;
+        justify-content: flex-start;
         align-items: center;
-        padding: 0 2rem;
+        padding: 0 1.5rem;
         gap: 3rem;
-        animation: skillset-marquee 60s linear infinite;
+        animation: skillset-marquee 20s linear infinite;
     }
 
     .skill-item {
@@ -36,24 +53,5 @@
             height: 1.25rem;
             aspect-ratio: 1;
         }
-    }
-
-    .marquee-fade {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 20%;
-    }
-
-    .marquee-fade-left {
-        @extend .marquee-fade;
-        left: 0;
-        background: linear-gradient(to right, var(--bg-base-100), transparent);
-    }
-
-    .marquee-fade-right {
-        @extend .marquee-fade;
-        right: 0;
-        background: linear-gradient(to left, var(--bg-base-100), transparent);
     }
 }
