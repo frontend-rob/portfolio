@@ -65,7 +65,7 @@ nav {
 
 .text-default,
 .text-hover {
-    transition: transform 0.5s ease;
+    transition: transform 300ms ease;
 }
 
 .text-default {
@@ -106,10 +106,10 @@ nav {
 }
 
 .btn-theme #moon-icon {
-    animation: dark-toggle-rotate 500ms ease-in-out;
+    animation: dark-toggle-rotate 300ms ease-in-out;
 }
 
 
 .btn-theme #sun-icon {
-    animation: light-toggle-rotate 500ms ease-in-out;
+    animation: light-toggle-rotate 300ms ease-in-out;
 }

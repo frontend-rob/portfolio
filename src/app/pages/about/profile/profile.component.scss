@@ -5,4 +5,58 @@
     max-width: 80rem;
     width: 100%;
     margin: 0 auto;
+    gap: 2rem;
+
+    .aboutme {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .aboutme-content {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            gap: 2rem;
+
+            .aboutme-header {
+                color: var(--text-secondary);
+                text-wrap: balance;
+            }
+
+            .aboutme-item {
+                display: flex;
+                gap: 1rem;
+                color: var(--text-secondary);
+                text-wrap: balance;
+
+                .aboutme-item-marker {
+                    display: flex;
+                    align-items: self-start;
+                    padding: .125rem;
+
+                    svg {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        aspect-ratio: 1;
+                        color: var(--primary)
+                    }
+                }
+            }
+        }
+
+        .aboutme-graphics {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            flex: 1;
+            border-radius: 1.5rem;
+            border: 1px solid var(--bg-neutral-100);
+        }
+    }
+
+    .aboutme-footer {
+        color: var(--text-secondary);
+        text-wrap: balance;
+    }
 }

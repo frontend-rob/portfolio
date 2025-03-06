@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChildren, QueryList, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChildren, QueryList, AfterViewInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 
 @Component({
     selector: 'app-testimonials',
@@ -9,7 +9,7 @@ import { Component, ElementRef, ViewChildren, QueryList, AfterViewInit, OnDestro
 })
 
 export class TestimonialsComponent implements AfterViewInit, OnDestroy {
-    testimonials: { name: string, role: string, testimonial: string }[] = [
+    testimonials: { name: string, role: string, testimonial: string, isActive?: boolean }[] = [
         {
             name: 'Name 1',
             role: 'Role of Person',
@@ -46,9 +46,13 @@ export class TestimonialsComponent implements AfterViewInit, OnDestroy {
 
     @ViewChildren('testimonialContent') testimonialContents!: QueryList<ElementRef>;
 
+    constructor(private cdr: ChangeDetectorRef) {}
+
     ngAfterViewInit() {
         this.checkOverflow();
         this.startAutoSlide();
+        this.updateVisualTimer();
+        this.cdr.detectChanges();
     }
 
     ngOnDestroy() {
@@ -85,6 +89,8 @@ export class TestimonialsComponent implements AfterViewInit, OnDestroy {
         }
         this.expanded = false;
         this.checkOverflow();
+        this.updateVisualTimer();
+        this.cdr.detectChanges();
     }
 
     getDisplayPage() {
@@ -105,19 +111,19 @@ export class TestimonialsComponent implements AfterViewInit, OnDestroy {
         this.expanded = !this.expanded;
     }
 
-
     checkOverflow() {
         setTimeout(() => {
             this.isOverflowing = this.testimonialContents.toArray().map(element => {
                 return element.nativeElement.scrollHeight > element.nativeElement.clientHeight;
             });
+            this.cdr.detectChanges();
         });
     }
 
     startAutoSlide() {
         this.autoSlideInterval = setInterval(() => {
             this.nextPage();
-        }, 10000);
+        }, 12000);
     }
 
     stopAutoSlide() {
@@ -129,5 +135,11 @@ export class TestimonialsComponent implements AfterViewInit, OnDestroy {
     resetAutoSlide() {
         this.stopAutoSlide();
         this.startAutoSlide();
+    }
+
+    updateVisualTimer() {
+        this.testimonials.forEach((testimonial, index) => {
+            testimonial.isActive = index === this.getDisplayPage() - 1;
+        });
     }
 }
