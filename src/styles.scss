@@ -38,7 +38,9 @@ app-root {
 
 app-about,
 app-projects,
-app-contact {
+app-contact,
+app-legal-notice,
+app-privacy-policy {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-base-100);

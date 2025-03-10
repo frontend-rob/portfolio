@@ -8,22 +8,27 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 export const routes: Routes = [
     {
         path: '',
+        title: 'Robert Greulich - Frontend Developer',
         component: AboutComponent,
     },
     {
         path: 'projects',
+        title: 'Projects | Robert Greulich',
         component: ProjectsComponent,
     },
     {
         path: 'contact',
+        title: 'Contact | Robert Greulich',
         component: ContactComponent,
     },
     {
         path: 'legal-notice',
+        title: 'Legal Notice | Robert Greulich',
         component: LegalNoticeComponent,
     },
     {
         path: 'privacy-policy',
+        title: 'Privacy Policy | Robert Greulich',
         component: PrivacyPolicyComponent,
     },
 ];
