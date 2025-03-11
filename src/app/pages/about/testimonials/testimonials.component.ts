@@ -11,30 +11,15 @@ import { Component, ElementRef, ViewChildren, QueryList, AfterViewInit, OnDestro
 export class TestimonialsComponent implements AfterViewInit, OnDestroy {
     testimonials: { name: string, role: string, testimonial: string, isActive?: boolean }[] = [
         {
-            name: 'Name 1',
-            role: 'Role of Person',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis omnis ad deserunt iure vel atque nihil vitae officia quam nemo minima modi repellendus ut impedit repellat delectus, corrupti tenetur.'
+            name: 'Steven Rudko',
+            role: 'Frontend Developer',
+            testimonial: "Robert has an extraordinary eye for design and brings impressive precision to his work. He's always willing to help and approaches challenges with a calm and reliable attitude, which has made him a real asset to the team and the Join collaborative project."
         },
         {
-            name: 'Name 2',
-            role: 'Role of Person',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis omnis ad deserunt iure vel atque nihil vitae officia quam nemo minima modi repellendus ut impedit repellat delectus, corrupti tenetur.'
-        },
-        {
-            name: 'Name 3',
-            role: 'Role of Person',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis omnis ad deserunt iure vel atque nihil vitae officia quam nemo minima modi repellendus ut impedit repellat delectus, corrupti tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis omnis ad deserunt iure vel atque nihil vitae officia quam nemo minima modi repellendus ut impedit repellat delectus, corrupti tenetur.'
-        },
-        {
-            name: 'Name 4',
-            role: 'Role of Person',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis omnis ad deserunt iure vel atque nihil vitae officia quam nemo minima modi repellendus ut impedit repellat delectus, corrupti tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis omnis ad deserunt iure vel atque nihil vitae officia quam nemo minima modi repellendus ut impedit repellat delectus, corrupti tenetur.'
-        },
-        {
-            name: 'Name 5',
-            role: 'Role of Person',
-            testimonial: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis omnis ad deserunt iure vel atque nihil vitae officia quam nemo minima modi repellendus ut impedit repellat delectus, corrupti tenetur.'
-        },
+            name: 'Yasin Sun',
+            role: 'Frontend Developer',
+            testimonial: "With his exceptional frontend skills and natural design sense, Robert consistently delivers high-quality work marked by precision and creativity. His contributions to the Join project showcased his ability to build seamless, user-friendly interfaces while collaborating effectively with the team. He's not only talented but also a great team player - professional, reliable, and always willing to help."
+        }
     ];
 
     currentPage: number = 1;
@@ -123,7 +108,7 @@ export class TestimonialsComponent implements AfterViewInit, OnDestroy {
     startAutoSlide() {
         this.autoSlideInterval = setInterval(() => {
             this.nextPage();
-        }, 12000);
+        }, 15000);
     }
 
     stopAutoSlide() {

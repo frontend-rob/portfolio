@@ -69,7 +69,7 @@
     color: var(--text-secondary);
 }
 
-@property --fill {
+@property --timer {
     syntax: '<percentage>';
     inherits: true;
     initial-value: 0%;
@@ -82,13 +82,13 @@
     content: '';
     inset: -2px;
     border-radius: inherit;
-    background: conic-gradient(currentColor var(--fill), transparent var(--fill));
-    transition: --fill 12s linear;
+    background: conic-gradient(currentColor var(--timer), transparent var(--timer));
+    transition: --timer 15s linear;
 }
 
 .testimonial-icon.active::before,
 .testimonial-icon.active::after {
-    animation: draw-border 12s linear forwards;
+    animation: draw-border 15s linear forwards;
 }
 
 .testimonial-icon svg {

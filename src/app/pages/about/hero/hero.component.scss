@@ -8,12 +8,23 @@
     gap: 4rem;
 
     .hero-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         max-width: 25rem;
         width: 100%;
         height: auto;
+        padding: 5rem;
         aspect-ratio: 1/1;
         border-radius: 9999rem;
         border: 0.125rem solid var(--bg-neutral-100);
+
+        svg {
+            height: 100%;
+            width: 100%;
+            color: var(--bg-neutral-100);
+            transition: none;
+        }
     }
 
     .hero-content-wrapper {

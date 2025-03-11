@@ -103,10 +103,10 @@
 // draw border animation
 @keyframes draw-border {
     from {
-        --fill: 0%;
+        --timer: 0%;
     }
 
     to {
-        --fill: 100%;
+        --timer: 100%;
     }
 }

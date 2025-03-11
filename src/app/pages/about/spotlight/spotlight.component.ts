@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ProjectsService } from '../../../services/projects.service';
 
 @Component({
     selector: 'app-spotlight',
@@ -11,43 +12,19 @@ import { RouterLink } from '@angular/router';
 
 export class SpotlightComponent {
 
-    spotlightProjects: { title: string, year: string, src: string, alt: string, color: string, routerLink: string }[] = [
-        {
-            title: 'Brizzle Bash',
-            year: '2025',
-            src: 'img/mockups/brizzle-bash.webp',
-            alt: 'Brizzle Bash Mockup',
-            color: '#fbcfe8',
-            routerLink: ''
-        },
-        {
-            title: 'Join - Kanban Board',
-            year: '2024',
-            src: 'img/mockups/join.webp',
-            alt: 'Join Mockup',
-            color: '#bfdbfe',
-            routerLink: ''
-        },
-        {
-            title: 'Delivery Service',
-            year: '2024',
-            src: 'img/mockups/delivery-service.webp',
-            alt: 'Delivery Service Mockup',
-            color: '#fed7aa',
-            routerLink: ''
-        },
-        {
-            title: 'Pokedex',
-            year: '2024',
-            src: 'img/mockups/pokedex.webp',
-            alt: 'Pokedex Mockup',
-            color: '#e5e5e5',
-            routerLink: ''
-        },
-    ];
+    spotlightProjects: { title: string, year: string, src: string, alt: string, color: string, routerLink: string, spotlight: boolean }[] = [];
+
+    constructor(private projectsService: ProjectsService) {
+        this.loadSpotlightProjects();
+    }
+
+    private loadSpotlightProjects() {
+        const allProjects = this.projectsService.getAllProjects();
+        this.spotlightProjects = allProjects.filter(project => project.spotlight === true);
+    }
 
     get featuredProjects() {
-        return this.spotlightProjects
+        return this.spotlightProjects;
     }
 
 }
