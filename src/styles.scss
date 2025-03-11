@@ -40,16 +40,14 @@ app-about,
 app-projects,
 app-contact,
 app-legal-notice,
-app-privacy-policy {
+app-privacy-policy,
+app-brizzle-bash,
+app-delivery-service,
+app-join,
+app-pokedex {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-base-100);
     flex: 1;
     animation: fadeIn-main-content 1000ms ease-in-out;
-}
-
-.section-header {
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
 }

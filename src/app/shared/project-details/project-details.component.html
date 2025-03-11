@@ -1,0 +1,44 @@
+<section class="project-details">
+    <nav class="project-header-nav">
+        <a routerLink="/projects" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-arrow-left">
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+            </svg>
+            Back to Projects
+        </a>
+        <div class="badge-neutral">{{ project.year }}</div>
+    </nav>
+    <header class="project-header">
+        <h2 class="project-title">{{ project.title }}</h2>
+        <span class="project-subtite">{{ project.subtitle }}</span>
+        <div class="tech-badges-container">
+            <div class="tech-badge" *ngFor="let techName of project.techStack">{{ techName }}</div>
+        </div>
+    </header>
+    <div class="project-demo-links">
+        <div class="divider"></div>
+        <div class="project-links">
+            <a [href]="project.liveDemo" target="_blank" rel="noopener noreferrer" class="project-link" *ngIf="project.liveDemo">
+                Live Demo
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-up-right">
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                </svg>
+            </a>
+            <a [href]="project.github" target="_blank" rel="noopener noreferrer" class="project-link">
+                GitHub
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-up-right">
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
