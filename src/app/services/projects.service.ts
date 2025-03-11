@@ -46,7 +46,7 @@ export class ProjectsService {
             liveDemo: '#',
             techStack: ['HTML', 'CSS', 'JavaScript']
         },
-        {
+       {
             spotlight: true,
             title: 'Pokedex',
             subtitle: '',
