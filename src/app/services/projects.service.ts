@@ -31,7 +31,7 @@ export class ProjectsService {
         },
         {
             spotlight: true,
-            title: 'Join - Kanban Board',
+            title: 'Join',
             subtitle: 'Join is a modern Kanban project management web application built with JavaScript and integrated with Firebase Realtime Database. It allows users to track tasks in real time, streamline workflows, and collaborate effortlessly - providing a clear, dynamic view of project progress.',
             year: '2024',
             src: 'img/mockups/join.webp',
@@ -101,5 +101,21 @@ export class ProjectsService {
 
     getProjectByRouterLink(routerLink: string) {
         return this.allProjects.find(project => project.routerLink === routerLink);
+    }
+
+    getPreviousProject(currentRouterLink: string) {
+        const index = this.allProjects.findIndex(project => project.routerLink === currentRouterLink);
+        if (index > 0) {
+            return this.allProjects[index - 1];
+        }
+        return null;
+    }
+
+    getNextProject(currentRouterLink: string) {
+        const index = this.allProjects.findIndex(project => project.routerLink === currentRouterLink);
+        if (index < this.allProjects.length - 1) {
+            return this.allProjects[index + 1];
+        }
+        return null;
     }
 }

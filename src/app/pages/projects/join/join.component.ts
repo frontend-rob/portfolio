@@ -16,7 +16,7 @@ import { ProjectsService } from '../../../services/projects.service';
 })
 
 export class JoinComponent {
-    project: { year: string, title: string, subtitle: string, github: string, liveDemo: string, techStack: string[], aboutText: string, keyFeatures: { title: string, description: string }[] };
+    project: { year: string, title: string, subtitle: string, github: string, liveDemo: string, techStack: string[], aboutText: string, keyFeatures: { title: string, description: string }[], routerLink: string };
 
     constructor(private projectsService: ProjectsService) {
         this.project = this.projectsService.getProjectByRouterLink('/projects/join') || {
@@ -27,7 +27,8 @@ export class JoinComponent {
             liveDemo: '',
             techStack: [],
             aboutText: '',
-            keyFeatures: []
+            keyFeatures: [],
+            routerLink: ''
         };
     }
 }
