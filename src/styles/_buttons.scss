@@ -42,6 +42,11 @@
     transition: 125ms ease;
 }
 
+.btn.disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .btn-neutral {
     background-color: var(--bg-base-200);
     color: var(--text-primary);
@@ -84,6 +89,40 @@
 
 .btn-primary:hover {
     @include button-hover(color-mix(in srgb, var(--primary) 90%, transparent 10%), var(--text-inverse));
+    transition: 125ms ease;
+}
+
+.btn-prev {
+    background-color: var(--backdrop);
+    border: 1px solid var(--bg-neutral-100);
+    color: var(--text-primary);
+    padding-left: 1rem;
+
+    svg {
+        color: var(--text-primary);
+        transition: none;
+    }
+}
+
+.btn-prev:hover {
+    @include button-hover(var(--bg-neutral-100), var(--text-primary));
+    transition: 125ms ease;
+}
+
+.btn-next {
+    background-color: var(--backdrop);
+    border: 1px solid var(--bg-neutral-100);
+    color: var(--text-primary);
+    padding-right: 1rem;
+
+    svg {
+        color: var(--text-primary);
+        transition: none;
+    }
+}
+
+.btn-next:hover {
+    @include button-hover(var(--bg-neutral-100), var(--text-primary));
     transition: 125ms ease;
 }
 
