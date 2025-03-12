@@ -13,12 +13,14 @@ import { RouterLink } from '@angular/router';
     styleUrls: ['./project-details.component.scss']
 })
 export class ProjectDetailsComponent {
-    @Input() project: { year: string, title: string, subtitle: string, github: string, liveDemo: string, techStack: string[] } = {
+    @Input() project: { year: string, title: string, subtitle: string, github: string, liveDemo: string, techStack: string[], aboutText: string, keyFeatures: { title: string, description: string }[] } = {
         year: '',
         title: '',
         subtitle: '',
         github: '',
         liveDemo: '',
-        techStack: []
+        techStack: [],
+        aboutText: '',
+        keyFeatures: []
     };
 }

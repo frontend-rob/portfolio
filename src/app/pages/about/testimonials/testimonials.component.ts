@@ -13,12 +13,12 @@ export class TestimonialsComponent implements AfterViewInit, OnDestroy {
         {
             name: 'Steven Rudko',
             role: 'Frontend Developer',
-            testimonial: "Robert has an extraordinary eye for design and brings impressive precision to his work. He's always willing to help and approaches challenges with a calm and reliable attitude, which has made him a real asset to the team and the Join collaborative project."
+            testimonial: 'Robert has an extraordinary eye for design and brings impressive precision to his work. He\'s always willing to help and approaches challenges with a calm and reliable attitude, which has made him a real asset to the team and the Join collaborative project.'
         },
         {
             name: 'Yasin Sun',
             role: 'Frontend Developer',
-            testimonial: "With his exceptional frontend skills and natural design sense, Robert consistently delivers high-quality work marked by precision and creativity. His contributions to the Join project showcased his ability to build seamless, user-friendly interfaces while collaborating effectively with the team. He's not only talented but also a great team player - professional, reliable, and always willing to help."
+            testimonial: 'With his exceptional frontend skills and natural design sense, Robert consistently delivers high-quality work marked by precision and creativity. His contributions to the Join project showcased his ability to build seamless, user-friendly interfaces while collaborating effectively with the team. He\'s not only talented but also a great team player - professional, reliable, and always willing to help.'
         }
     ];
 

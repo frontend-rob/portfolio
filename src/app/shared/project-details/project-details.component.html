@@ -13,7 +13,7 @@
     </nav>
     <header class="project-header">
         <h2 class="project-title">{{ project.title }}</h2>
-        <span class="project-subtite">{{ project.subtitle }}</span>
+        <span class="project-text">{{ project.subtitle }}</span>
         <div class="tech-badges-container">
             <div class="tech-badge" *ngFor="let techName of project.techStack">{{ techName }}</div>
         </div>
@@ -21,7 +21,8 @@
     <div class="project-demo-links">
         <div class="divider"></div>
         <div class="project-links">
-            <a [href]="project.liveDemo" target="_blank" rel="noopener noreferrer" class="project-link" *ngIf="project.liveDemo">
+            <a [href]="project.liveDemo" target="_blank" rel="noopener noreferrer" class="project-link"
+                *ngIf="project.liveDemo">
                 Live Demo
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -40,5 +41,19 @@
                 </svg>
             </a>
         </div>
+    </div>
+    <div class="project-decription">
+        <h3 class="project-subtitle">About the Project</h3>
+        <span class="project-text">{{ project.aboutText }}</span>
+    </div>
+    <div class="project-features">
+        <h3 class="project-subtitle">Key Features</h3>
+        <ul>
+            <li *ngFor="let feature of project.keyFeatures">
+                <p class="feature-text"><strong class="feature-title">{{ feature.title }}:</strong>
+                    {{feature.description }}
+                </p>
+            </li>
+        </ul>
     </div>
 </section>
