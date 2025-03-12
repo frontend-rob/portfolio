@@ -16,7 +16,7 @@ import { ProjectsService } from '../../../services/projects.service';
 })
 
 export class BrizzleBashComponent {
-    project: { year: string, title: string, subtitle: string, github: string, liveDemo: string, techStack: string[] };
+    project: { year: string, title: string, subtitle: string, github: string, liveDemo: string, techStack: string[], aboutText: string, keyFeatures: { title: string, description: string }[] };
 
     constructor(private projectsService: ProjectsService) {
         this.project = this.projectsService.getProjectByRouterLink('/projects/brizzle-bash') || {
@@ -25,7 +25,9 @@ export class BrizzleBashComponent {
             subtitle: '',
             github: '',
             liveDemo: '',
-            techStack: []
+            techStack: [],
+            aboutText: '',
+            keyFeatures: []
         };
     }
 }
