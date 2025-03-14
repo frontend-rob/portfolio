@@ -1,0 +1,51 @@
+.project-decription {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.project-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    ul {
+        list-style-type: disc;
+        padding-inline-start: 1rem;
+    }
+
+    li {
+        padding-inline-start: .375rem;
+        line-height: 1.75;
+        margin: 1rem 0;
+
+        .feature-title {
+            font-size: 1rem;
+            font-family: 'Satoshi';
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .feature-text {
+            font-size: 1rem;
+            font-family: 'Satoshi';
+            color: var(--text-secondary);
+        }
+    }
+
+    li:first-child {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+}
+
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

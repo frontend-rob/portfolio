@@ -11,7 +11,11 @@ import { ProjectsService } from '../../services/projects.service';
         RouterLink
     ],
     templateUrl: './project-details.component.html',
-    styleUrls: ['./project-details.component.scss']
+    styleUrls: [
+        './project-details.component.scss',
+        './project-details-header.scss',
+        './project-details-body.scss'
+    ]
 })
 
 export class ProjectDetailsComponent {
