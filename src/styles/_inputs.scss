@@ -1,0 +1,119 @@
+input[type=text],
+input[type=email] {
+    height: 3rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid var(--bg-neutral-100);
+    background-color: var(--bg-base-100);
+    font-family: 'Satoshi';
+    font-size: 1rem;
+    line-height: 1.25;
+    color: var(--text-primary);
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid var(--bg-neutral-100);
+    background-color: var(--bg-base-100);
+    font-family: 'Satoshi';
+    font-size: 1rem;
+    line-height: 1.25;
+    color: var(--text-primary);
+    resize: none;
+    white-space: pre-wrap;
+}
+
+textarea::placeholder {
+    color: var(--text-secondary);
+    transition: 300ms ease;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder {
+    color: var(--text-secondary);
+    transition: 300ms ease;
+}
+
+input[type=text]:focus-visible,
+input[type=email]:focus-visible,
+textarea:focus-visible {
+    border: 1.5px solid var(--text-secondary);
+    outline: none;
+}
+
+label {
+    color: var(--text-primary);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+label.secondary {
+    color: var(--text-secondary);
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    aspect-ratio: 1;
+    border: 1.5px solid var(--bg-neutral-100);
+    border-radius: .25rem;
+    background-color: var(--bg-base-100);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+        border-color: var(--primary);
+        cursor: pointer;
+    }
+
+    &:checked {
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    &::after {
+        content: '\2714';
+        font-size: 1rem;
+        color: var(--bg-base-100);
+        opacity: 0;
+        transform: scale(0.25);
+        transition: 300ms ease;
+    }
+
+    &:checked::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+label:hover input[type=checkbox] {
+    border-color: var(--bg-neutral-200);
+    cursor: pointer;
+}
+
+input[type=checkbox].ng-invalid.submitted {
+    border-color: var(--error);
+
+    &:hover {
+        border-color: var(--primary);
+    }
+}
+
+.error-border {
+    border-color: var(--error) !important;
+}
+
+.error-link {
+    color: var(--error) !important;
+}

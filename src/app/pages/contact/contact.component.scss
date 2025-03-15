@@ -1,0 +1,22 @@
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    gap: 4rem;
+
+    .contact-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 4rem;
+
+        app-contact-form,
+        app-info-card {
+            width: 100%;
+        }
+    }
+
+}

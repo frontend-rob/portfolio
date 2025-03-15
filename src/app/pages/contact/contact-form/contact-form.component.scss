@@ -1,0 +1,35 @@
+.contact-form {
+    width: 100%;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        user-select: none;
+
+        .input-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .checkbox-field {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0.25rem 1.5rem 0.25rem;
+            gap: 1rem;
+
+            .link-primary {
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+
+        .input-error {
+            color: var(--error);
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+    }
+}

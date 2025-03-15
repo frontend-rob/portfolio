@@ -1,0 +1,97 @@
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 2rem;
+    max-width: 80rem;
+    width: 100;
+    margin: 0 auto;
+    gap: 4rem;
+
+    .section-header {
+        width: 40%;
+    }
+
+    .faq-accordion {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 1.25rem;
+
+        .faq-item {
+            border-radius: 1rem;
+            background-color: var(--bg-base-200);
+            border: 1.5px solid var(--bg-neutral-100);
+            transition: 125ms ease;
+            cursor: pointer;
+            transition: 300ms ease;
+
+            .faq-toggle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 1rem;
+                border-radius: 1rem;
+                background-color: unset;
+                border: unset;
+                cursor: pointer;
+                transition: 300ms ease;
+
+                svg {
+                    height: 1.25rem;
+                    width: 1.245rem;
+                    color: var(--text-primary);
+                    transition: transform 300ms ease;
+                }
+
+                svg.open {
+                    transform: rotate(180deg);
+                }
+
+                .faq-content {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    .faq-nr {
+                        font-family: 'Satoshi';
+                        font-size: 1rem;
+                        color: var(--text-secondary);
+                        font-weight: 500;
+                    }
+
+                    .faq-question {
+                        font-family: 'Satoshi';
+                        font-size: 1rem;
+                        color: var(--text-primary);
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                padding: 0 1rem;
+                text-wrap: pretty;
+                transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
+
+                &.open {
+                    max-height: 10rem;
+                    padding: 0 1rem 1rem 1rem;
+                }
+
+                &:hover {
+                    cursor: auto;
+                }
+
+                .faq-answer-text {
+                    font-family: 'Satoshi';
+                    font-size: 1rem;
+                    color: var(--text-secondary);
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
