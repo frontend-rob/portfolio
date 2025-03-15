@@ -1,0 +1,50 @@
+<div class="contact-form">
+    <form [formGroup]="contactData" (ngSubmit)="onSubmit()">
+        <div class="input-field">
+            <input type="text" formControlName="name" id="name" placeholder="Name" title="" required
+                autocomplete="name">
+            <span class="input-error"
+                [ngStyle]="{ opacity: contactData.get('name')?.invalid && submitted ? '1' : '0' }">
+                * Please enter your full name.
+            </span>
+        </div>
+        <div class="input-field">
+            <input type="email" formControlName="email" id="email" placeholder="Email" title="" required
+                autocomplete="email">
+            <span class="input-error"
+                [ngStyle]="{ opacity: contactData.get('email')?.invalid && submitted ? '1' : '0' }">
+                * Please enter a valid email address.
+            </span>
+        </div>
+        <div class="input-field">
+            <textarea formControlName="message" id="message" placeholder="Message" rows="7" title="" required
+                autocomplete="off">
+            </textarea>
+            <span class="input-error"
+                [ngStyle]="{ opacity: contactData.get('message')?.invalid && submitted ? '1' : '0' }">
+                * The message must contain at least 10 characters.
+            </span>
+        </div>
+        <div class="checkbox-field">
+            <input type="checkbox" formControlName="privacy" id="privacy" autocomplete="off" required
+                [ngClass]="{ 'error-border': contactData.get('privacy')?.invalid && submitted }">
+            <label for="privacy" class="secondary">
+                I have reviewed the
+                <a routerLink="/privacy-policy" target="_blank" rel="noopener noreferrer"
+                    [ngClass]="{ 'error-link': contactData.get('privacy')?.invalid && submitted }"
+                    class="link-primary">privacy policy
+                </a>
+                and agree to the specified terms.
+            </label>
+        </div>
+        <button type="submit" class="btn btn-submit">
+            Send Message
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal">
+                <path
+                    d="M3.714 3.048a.498.498 0 0 0-.683.627l2.843 7.627a2 2 0 0 1 0 1.396l-2.842 7.627a.498.498 0 0 0 .682.627l18-8.5a.5.5 0 0 0 0-.904z" />
+                <path d="M6 12h16" />
+            </svg>
+        </button>
+    </form>
+</div>

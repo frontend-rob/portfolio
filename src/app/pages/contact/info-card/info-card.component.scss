@@ -1,0 +1,54 @@
+.info-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--bg-base-200);
+    gap: 2rem;
+
+    .card-badge {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: .5rem 1rem;
+        border-radius: 9999rem;
+        gap: .5rem;
+        background-color: color-mix(in srgb, var(--primary) 10%, transparent 100%);
+        user-select: none;
+
+        .indicator {
+            position: relative;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 9999rem;
+            background-color: var(--primary);
+        }
+
+        .indicator-pulse {
+            position: absolute;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 9999rem;
+            background-color: var(--primary);
+            animation: pulse 1500ms ease infinite;
+        }
+    }
+
+    .info-card-img {
+        display: block;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        border: 1.5px solid var(--bg-neutral-200);
+
+    }
+
+    .info-card-text {
+        font-family: 'Satoshi';
+        font-size: 1rem;
+        line-height: 1.5;
+        color: var(--text-secondary);
+        text-align: center;
+    }
+}
