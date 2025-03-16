@@ -28,7 +28,7 @@
             .faq-toggle {
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-start;
                 width: 100%;
                 padding: 1rem;
                 border-radius: 1rem;
@@ -50,7 +50,8 @@
 
                 .faq-content {
                     display: flex;
-                    align-items: center;
+                    justify-content: space-between;
+                    align-self: start;
                     gap: 0.5rem;
 
                     .faq-nr {
@@ -65,6 +66,7 @@
                         font-size: 1rem;
                         color: var(--text-primary);
                         font-weight: 500;
+                        text-align: start;
                     }
                 }
             }
@@ -77,7 +79,7 @@
                 transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
 
                 &.open {
-                    max-height: 10rem;
+                    max-height: 20rem;
                     padding: 0 1rem 1rem 1rem;
                 }
 
@@ -93,5 +95,22 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .faq-section {
+        flex-direction: column;
+
+        .section-header,
+        .faq-accordion {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .faq-section {
+        padding: 4rem 1rem;
     }
 }

@@ -1,0 +1,36 @@
+<section class="profile-accordion">
+    <div class="accordion-item" *ngFor="let profile of profileCollection; let i = index">
+        <button class="accordion-toggle" (click)="toggleProfile(i)">
+            <div class="accordion-content">
+                <span class="accordion-icon">
+                    <svg *ngIf="profile.icon === 'code'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m18 16 4-4-4-4" />
+                        <path d="m6 8-4 4 4 4" />
+                        <path d="m14.5 4-5 16" />
+                    </svg>
+                    <svg *ngIf="profile.icon === 'growth'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                        <polyline points="16 7 22 7 22 13" />
+                    </svg>
+                    <svg *ngIf="profile.icon === 'work'" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="14" x="2" y="3" rx="2" />
+                        <line x1="8" x2="16" y1="21" y2="21" />
+                        <line x1="12" x2="12" y1="17" y2="21" />
+                    </svg>
+                </span>
+                <span class="accordion-title">{{ profile.title }}</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-down" [class.open]="profile.open">
+                <path d="m6 9 6 6 6-6" />
+            </svg>
+        </button>
+        <div class="accordion-answer" [class.open]="profile.open">
+            <span class="accordion-answer-text">{{ profile.content }}</span>
+        </div>
+    </div>
+</section>

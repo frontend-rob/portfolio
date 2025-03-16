@@ -1,0 +1,85 @@
+.profile-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .accordion-item {
+        border-radius: 1rem;
+        background-color: var(--bg-base-200);
+        border: 1.5px solid var(--bg-neutral-100);
+        transition: 300ms ease;
+        cursor: pointer;
+
+        .accordion-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: unset;
+            border: unset;
+            cursor: pointer;
+            transition: 300ms ease;
+
+            svg {
+                height: 1.25rem;
+                width: 1.25rem;
+                color: var(--text-primary);
+                transition: transform 300ms ease;
+            }
+
+            svg.open {
+                transform: rotate(180deg);
+            }
+
+            .accordion-content {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .accordion-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        color: var(--primary);
+                    }
+                }
+
+                .accordion-title {
+                    font-family: 'Satoshi';
+                    font-size: 1rem;
+                    color: var(--text-primary);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .accordion-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1rem;
+            transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
+
+            &.open {
+                max-height: 20rem;
+                padding: 0 1rem 1rem 1rem;
+            }
+
+            &:hover {
+                cursor: auto;
+            }
+
+            .accordion-answer-text {
+                font-family: 'Satoshi';
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.5;
+            }
+        }
+    }
+}

@@ -23,27 +23,6 @@
                 text-wrap: balance;
                 line-height: 1.5;
             }
-
-            .aboutme-item {
-                display: flex;
-                gap: 1rem;
-                color: var(--text-secondary);
-                text-wrap: balance;
-                line-height: 1.5;
-
-                .aboutme-item-marker {
-                    display: flex;
-                    align-items: self-start;
-                    padding: .125rem;
-
-                    svg {
-                        width: 1.25rem;
-                        height: 1.25rem;
-                        aspect-ratio: 1;
-                        color: var(--primary)
-                    }
-                }
-            }
         }
 
         .aboutme-img {
@@ -51,6 +30,7 @@
             justify-content: center;
             align-items: center;
             width: 50%;
+            // height: 20rem;
             flex: 1;
             border-radius: 1.5rem;
             border: 1px solid var(--bg-neutral-100);
@@ -82,5 +62,11 @@
                 width: 100%;
             }
         }
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .profile-section {
+        padding: 4rem 1rem;
     }
 }
