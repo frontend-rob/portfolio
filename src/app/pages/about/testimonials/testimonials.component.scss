@@ -123,6 +123,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     line-clamp: 3;
+    line-height: 1.5;
 }
 
 .testimonial-content.expanded {
@@ -158,4 +159,40 @@
     width: 100%;
     text-align: center;
     color: var(--text-secondary);
+}
+
+@media screen and (max-width: 48rem) {
+    .testimonials-section {
+        flex-direction: column;
+        padding: 4rem 2rem;
+
+        .section-header {
+            width: 100%;
+        }
+
+        .testimonial-wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .testimonials-section {
+        padding: 4rem 1rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .testimonial-content {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+
+    .testimonals-control {
+        justify-content: space-between;
+    }
 }

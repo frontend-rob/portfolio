@@ -2,7 +2,9 @@ app-header {
     position: sticky;
     top: 0;
     left: 0;
-    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
     background-color: var(--backdrop);
     backdrop-filter: blur(.75rem);
     z-index: 100;
@@ -10,20 +12,24 @@ app-header {
     animation: fadeIn-top-down 500ms ease-in-out;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 80rem;
+.header-content {
     width: 100%;
-    margin: 0 auto;
-    height: 2.75rem;
-    padding: 0 2rem;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80rem;
+        width: 100%;
+        margin: 0 auto;
+        height: 2.75rem;
+        padding: 0 2rem;
+    }
 }
 
 .logo {
     font-family: 'Clash Display';
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 500;
     text-decoration: none;
     color: var(--text-primary);
@@ -109,7 +115,27 @@ nav {
     animation: dark-toggle-rotate 300ms ease-in-out;
 }
 
-
 .btn-theme #sun-icon {
     animation: light-toggle-rotate 300ms ease-in-out;
+}
+
+@media screen and (max-width: 40rem) {
+    app-header {
+        padding: 0.75rem 0;
+    }
+
+    .header-content {
+        nav {
+            padding: 0 1rem;
+        }
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .btn-theme {
+        border: 1px solid var(--bg-neutral-100);
+        transition: none;
+    }
 }

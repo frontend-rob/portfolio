@@ -29,7 +29,7 @@
                 align-items: center;
                 height: 100%;
                 width: 100%;
-                padding: 2rem;
+                padding: 1rem;
                 background-color: var(--bg-neutral-100);
                 border-radius: 1.5rem;
                 cursor: pointer;
@@ -75,5 +75,26 @@
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .spotlight-section {
+        padding: 4rem 1rem;
+
+        .spotlight-projects-wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            column-gap: unset;
+            row-gap: 3rem;
+        }
+
+        .project-card:nth-child(even) {
+            margin-top: unset;
+        }
+
+        .project-card:nth-child(odd) {
+            margin-bottom: unset;
+        }
     }
 }

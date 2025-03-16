@@ -21,6 +21,7 @@
             .aboutme-header {
                 color: var(--text-secondary);
                 text-wrap: balance;
+                line-height: 1.5;
             }
 
             .aboutme-item {
@@ -28,6 +29,7 @@
                 gap: 1rem;
                 color: var(--text-secondary);
                 text-wrap: balance;
+                line-height: 1.5;
 
                 .aboutme-item-marker {
                     display: flex;
@@ -44,7 +46,7 @@
             }
         }
 
-        .aboutme-graphics {
+        .aboutme-img {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -58,5 +60,27 @@
     .aboutme-footer {
         color: var(--text-secondary);
         text-wrap: balance;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .profile-section {
+        .aboutme {
+            flex-direction: column-reverse;
+
+            .aboutme-content {
+                width: 100%;
+
+                .aboutme-header,
+                .aboutme-item {
+                    text-wrap: pretty;
+                }
+            }
+
+            .aboutme-img {
+                width: 100%;
+            }
+        }
     }
 }

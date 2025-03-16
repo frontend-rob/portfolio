@@ -7,9 +7,12 @@
     margin: 0 auto;
     padding: 1rem 2rem;
     padding-bottom: 2rem;
-    font-size: .875rem;
-    color: var(--text-secondary);
     animation: fadeIn-main-content 1000ms ease-in-out;
+
+    .footer-text {
+        font-size: .875rem;
+        color: var(--text-secondary);
+    }
 
     .footer-links {
         display: flex;
@@ -47,5 +50,15 @@
             filter: blur(.5px);
             transition: none;
         }
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .footer-content {
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 1.25rem;
+        margin-bottom: 6rem;
+        text-align: center;
     }
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { CommonModule } from '@angular/common';
+import { MobileMenuComponent } from './shared/mobile-menu/mobile-menu.component';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +11,8 @@ import { CommonModule } from '@angular/common';
         CommonModule,
         RouterOutlet,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        MobileMenuComponent
     ],
     templateUrl: './app.component.html',
     styleUrls: [

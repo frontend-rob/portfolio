@@ -1,0 +1,13 @@
+<div class="mobile-menu-content">
+    <nav>
+        <a routerLink="/" [ngClass]="{'active-mobile-link': isActive('/')}" class="mobile-menu-link">
+            <span class="mobile-menu-item">About</span>
+        </a>
+        <a routerLink="/projects" [ngClass]="{'active-mobile-link': isActive('/projects')}" class="mobile-menu-link">
+            <span class="mobile-menu-item">Projects</span>
+        </a>
+        <a routerLink="/contact" [ngClass]="{'active-mobile-link': isActive('/contact')}" class="mobile-menu-link">
+            <span class="mobile-menu-item">Contact</span>
+        </a>
+    </nav>
+</div>

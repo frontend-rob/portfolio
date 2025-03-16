@@ -1,7 +1,7 @@
 .footer-card {
     max-width: 80rem;
     width: 100%;
-    padding: 2rem 2rem;
+    padding: 2rem;
     margin: 0 auto;
 
     .footer-inner {
@@ -48,5 +48,15 @@
 
     .footer-title {
         max-width: 30rem;
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .footer-card {
+        padding: 2rem 1rem;
+
+        .footer-inner {
+            padding: 2rem 1rem;
+        }
     }
 }

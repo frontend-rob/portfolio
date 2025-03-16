@@ -30,3 +30,10 @@
         line-height: 1.75;
     }
 }
+
+@media screen and (max-width: 40rem) {
+    .project-details {
+        padding: 4rem 1rem;
+        padding-bottom: 2rem;
+    }
+}

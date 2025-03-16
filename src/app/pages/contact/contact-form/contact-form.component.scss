@@ -15,7 +15,7 @@
 
         .checkbox-field {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             padding: 1rem 0.25rem 1.5rem 0.25rem;
             gap: 1rem;
 
@@ -30,6 +30,22 @@
             color: var(--error);
             opacity: 0;
             transition: opacity 300ms ease;
+        }
+
+        .submit-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .contact-form {
+        form {
+            .input-error {
+                font-size: .875rem;
+            }
         }
     }
 }
