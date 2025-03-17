@@ -1,5 +1,7 @@
 app-header {
+    user-select: none;
     position: sticky;
+    z-index: 100;
     top: 0;
     left: 0;
     display: flex;
@@ -7,9 +9,7 @@ app-header {
     height: 4.5rem;
     background-color: var(--backdrop);
     backdrop-filter: blur(.75rem);
-    z-index: 100;
-    user-select: none;
-    animation: fadeIn-top-down 500ms ease-in-out;
+    animation: fade-in-top-down 500ms ease-in-out;
 }
 
 .header-content {
@@ -17,12 +17,12 @@ app-header {
 
     nav {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        max-width: 80rem;
+        justify-content: space-between;
         width: 100%;
-        margin: 0 auto;
+        max-width: 80rem;
         height: 2.75rem;
+        margin: 0 auto;
         padding: 0 2rem;
     }
 }
@@ -31,15 +31,15 @@ app-header {
     font-family: 'Clash Display';
     font-size: 1.5rem;
     font-weight: 500;
-    text-decoration: none;
     color: var(--text-primary);
+    text-decoration: none;
 }
 
 .nav-menu {
     display: flex;
-    list-style: none;
-    font-size: 1rem;
     gap: 2rem;
+    font-size: 1rem;
+    list-style: none;
 }
 
 .nav-item {
@@ -48,25 +48,11 @@ app-header {
 }
 
 .nav-link {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 400;
+    position: relative;
     display: inline-block;
-    position: relative;
-}
-
-.nav-link.active-link {
-    color: var(--text-primary);
-}
-
-.nav-link.active-link .text-default {
-    color: var(--text-primary);
-}
-
-.hover-effect {
-    display: inline-flex;
-    overflow: hidden;
-    position: relative;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-decoration: none;
 }
 
 .text-default,
@@ -79,12 +65,26 @@ app-header {
     color: var(--text-secondary);
 }
 
-.text-hover {
-    transform: translateY(120%) skewY(16deg);
+.nav-link.active-link {
     color: var(--text-primary);
+}
+
+.nav-link.active-link .text-default {
+    color: var(--text-primary);
+}
+
+.hover-effect {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+}
+
+.text-hover {
     position: absolute;
     top: 0;
     left: 0;
+    transform: translateY(120%) skewY(16deg);
+    color: var(--text-primary);
 }
 
 .nav-item:hover .text-default {
@@ -97,13 +97,13 @@ app-header {
 
 .active-link {
     display: flex;
+    gap: .5rem;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
     color: var(--text-primary);
 }
 
-.active-link:before {
+.active-link::before {
     content: "\00a0";
     width: 6px !important;
     height: 6px !important;
@@ -119,7 +119,7 @@ app-header {
     animation: light-toggle-rotate 300ms ease-in-out;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (width <= 40rem) {
     app-header {
         padding: 0.75rem 0;
     }

@@ -1,21 +1,21 @@
 .info-card-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     align-items: center;
     padding: 1.5rem;
     border-radius: 1.5rem;
     background-color: var(--bg-base-200);
-    gap: 2rem;
 
     .card-badge {
+        user-select: none;
         position: relative;
         display: inline-flex;
+        gap: .5rem;
         align-items: center;
         padding: .5rem 1rem;
         border-radius: 9999rem;
-        gap: .5rem;
         background-color: color-mix(in srgb, var(--primary) 10%, transparent 100%);
-        user-select: none;
 
         .indicator {
             position: relative;
@@ -37,15 +37,15 @@
 
     .info-card-img {
         display: block;
-        height: 8rem;
         width: 8rem;
-        border-radius: 50%;
+        height: 8rem;
         border: 1.5px solid var(--bg-neutral-200);
+        border-radius: 50%;
 
     }
 
     .info-card-text {
-        font-family: 'Satoshi';
+        font-family: Satoshi;
         font-size: 1rem;
         line-height: 1.5;
         color: var(--text-secondary);

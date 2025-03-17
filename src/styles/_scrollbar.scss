@@ -9,16 +9,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--bg-neutral-200);
+    cursor: pointer;
     border: 2px solid var(--bg-base-100);
     border-radius: .75rem;
-    cursor: pointer;
+    background-color: var(--bg-neutral-200);
     transition: all 300ms ease;
 }
 
-@media (min-width: 640px) {
+@media (width >= 640px) {
     ::-webkit-scrollbar {
-        height: 12px;
         width: 12px;
+        height: 12px;
     }
 }

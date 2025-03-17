@@ -1,32 +1,32 @@
 .footer-card {
-    max-width: 80rem;
     width: 100%;
-    padding: 2rem;
+    max-width: 80rem;
     margin: 0 auto;
+    padding: 2rem;
 
     .footer-inner {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        gap: 2rem;
         align-items: center;
-        max-width: 80rem;
+        justify-content: center;
         width: 100%;
+        max-width: 80rem;
         padding: 2rem;
         border-radius: 1.5rem;
-        gap: 2rem;
-        background-color: var(--bg-base-200);
         text-align: center;
+        background-color: var(--bg-base-200);
     }
 
     .footer-badge {
+        user-select: none;
         position: relative;
         display: inline-flex;
+        gap: .5rem;
         align-items: center;
         padding: .5rem 1rem;
         border-radius: 9999rem;
-        gap: .5rem;
         background-color: color-mix(in srgb, var(--primary) 10%, transparent 100%);
-        user-select: none;
 
         .indicator {
             position: relative;
@@ -51,7 +51,7 @@
     }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (width <= 40rem) {
     .footer-card {
         padding: 2rem 1rem;
 

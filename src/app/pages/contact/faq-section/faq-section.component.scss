@@ -1,11 +1,11 @@
 .faq-section {
     display: flex;
-    justify-content: space-between;
-    padding: 6rem 2rem;
-    max-width: 80rem;
-    width: 100;
-    margin: 0 auto;
     gap: 4rem;
+    justify-content: space-between;
+    width: 100;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 6rem 2rem;
 
     .section-header {
         width: 40%;
@@ -14,32 +14,31 @@
     .faq-accordion {
         display: flex;
         flex-direction: column;
-        width: 60%;
         gap: 1.25rem;
+        width: 60%;
 
         .faq-item {
+            cursor: pointer;
+            border: 1.5px solid var(--bg-neutral-100);
             border-radius: 1rem;
             background-color: var(--bg-base-200);
-            border: 1.5px solid var(--bg-neutral-100);
-            transition: 125ms ease;
-            cursor: pointer;
             transition: 300ms ease;
 
             .faq-toggle {
+                cursor: pointer;
                 display: flex;
-                justify-content: space-between;
                 align-items: flex-start;
+                justify-content: space-between;
                 width: 100%;
                 padding: 1rem;
+                border: unset;
                 border-radius: 1rem;
                 background-color: unset;
-                border: unset;
-                cursor: pointer;
                 transition: 300ms ease;
 
                 svg {
-                    height: 1.25rem;
                     width: 1.245rem;
+                    height: 1.25rem;
                     color: var(--text-primary);
                     transition: transform 300ms ease;
                 }
@@ -50,37 +49,37 @@
 
                 .faq-content {
                     display: flex;
-                    justify-content: space-between;
-                    align-self: start;
                     gap: 0.5rem;
+                    align-self: start;
+                    justify-content: space-between;
 
                     .faq-nr {
-                        font-family: 'Satoshi';
+                        font-family: Satoshi;
                         font-size: 1rem;
-                        color: var(--text-secondary);
                         font-weight: 500;
+                        color: var(--text-secondary);
                     }
 
                     .faq-question {
-                        font-family: 'Satoshi';
+                        font-family: Satoshi;
                         font-size: 1rem;
-                        color: var(--text-primary);
                         font-weight: 500;
+                        color: var(--text-primary);
                         text-align: start;
                     }
                 }
             }
 
             .faq-answer {
-                max-height: 0;
                 overflow: hidden;
+                max-height: 0;
                 padding: 0 1rem;
                 text-wrap: pretty;
                 transition: max-height 300ms ease-in-out, padding 300ms ease-in-out;
 
                 &.open {
                     max-height: 20rem;
-                    padding: 0 1rem 1rem 1rem;
+                    padding: 0 1rem 1rem;
                 }
 
                 &:hover {
@@ -88,17 +87,17 @@
                 }
 
                 .faq-answer-text {
-                    font-family: 'Satoshi';
+                    font-family: Satoshi;
                     font-size: 1rem;
-                    color: var(--text-secondary);
                     line-height: 1.5;
+                    color: var(--text-secondary);
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (width <= 48rem) {
     .faq-section {
         flex-direction: column;
 
@@ -109,7 +108,7 @@
     }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (width <= 40rem) {
     .faq-section {
         padding: 4rem 1rem;
     }

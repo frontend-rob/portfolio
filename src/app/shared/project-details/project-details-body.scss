@@ -10,25 +10,25 @@
     gap: 1.25rem;
 
     ul {
-        list-style-type: disc;
         padding-inline-start: 1rem;
+        list-style-type: disc;
     }
 
     li {
+        margin: 1rem 0;
         padding-inline-start: .375rem;
         line-height: 1.75;
-        margin: 1rem 0;
 
         .feature-title {
+            font-family: Satoshi;
             font-size: 1rem;
-            font-family: 'Satoshi';
-            color: var(--text-primary);
             font-weight: 600;
+            color: var(--text-primary);
         }
 
         .feature-text {
+            font-family: Satoshi;
             font-size: 1rem;
-            font-family: 'Satoshi';
             color: var(--text-secondary);
         }
     }
@@ -39,13 +39,13 @@
     }
 
     li:last-child {
-        margin-bottom: 0;
         margin-top: 1rem;
+        margin-bottom: 0;
     }
 }
 
 .project-navigation {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }

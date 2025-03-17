@@ -1,17 +1,17 @@
 .contact-section {
     display: flex;
     flex-direction: column;
-    padding: 6rem 2rem;
-    max-width: 80rem;
-    width: 100%;
-    margin: 0 auto;
     gap: 4rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 6rem 2rem;
 
     .contact-content {
         display: flex;
+        gap: 4rem;
         justify-content: space-between;
         width: 100%;
-        gap: 4rem;
 
         app-contact-form,
         app-info-card {
@@ -20,7 +20,7 @@
     }
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (width <= 48rem) {
     .contact-section {
         .contact-content {
             gap: 2rem;
@@ -28,7 +28,7 @@
     }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (width <= 40rem) {
     .contact-section {
         padding: 4rem 1rem;
 

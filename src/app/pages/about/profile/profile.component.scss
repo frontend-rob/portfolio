@@ -1,50 +1,49 @@
 .profile-section {
     display: flex;
     flex-direction: column;
-    padding: 6rem 2rem;
-    max-width: 80rem;
-    width: 100%;
-    margin: 0 auto;
     gap: 2rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 6rem 2rem;
 
     .aboutme {
         display: flex;
-        justify-content: space-between;
         gap: 2rem;
+        justify-content: space-between;
 
         .aboutme-content {
             display: flex;
             flex-direction: column;
-            width: 50%;
             gap: 2rem;
+            width: 50%;
 
             .aboutme-header {
+                line-height: 1.5;
                 color: var(--text-secondary);
                 text-wrap: balance;
-                line-height: 1.5;
             }
         }
 
         .aboutme-img {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
-            // height: 20rem;
             flex: 1;
-            border-radius: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
             border: 1px solid var(--bg-neutral-100);
+            border-radius: 1.5rem;
         }
     }
 
     .aboutme-footer {
+        line-height: 1.5;
         color: var(--text-secondary);
         text-wrap: balance;
-        line-height: 1.5;
     }
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (width <= 48rem) {
     .profile-section {
         .aboutme {
             flex-direction: column-reverse;
@@ -65,7 +64,7 @@
     }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (width <= 40rem) {
     .profile-section {
         padding: 4rem 1rem;
     }

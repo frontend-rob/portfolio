@@ -1,11 +1,11 @@
 .article-section {
     display: flex;
     flex-direction: column;
-    padding: 6rem 2rem;
-    max-width: 64rem;
-    width: 100%;
-    margin: 0 auto;
     gap: 4rem;
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 6rem 2rem;
 }
 
 .contact-section {
@@ -15,28 +15,28 @@
 
     .contact-item {
         display: flex;
-        align-items: center;
         gap: 1rem;
+        align-items: center;
 
         svg {
-            height: 1.25rem;
             width: 1.25rem;
+            height: 1.25rem;
             color: var(--text-secondary);
             stroke-width: 1.5;
             transition: none;
         }
 
         .contact-text {
+            font-family: Satoshi;
             font-size: 1rem;
-            font-family: 'Satoshi';
             color: var(--text-primary);
         }
     }
 }
 
 ul {
-    list-style-type: disc;
     padding-inline-start: 1rem;
+    list-style-type: disc;
 }
 
 li {
@@ -44,9 +44,9 @@ li {
     line-height: 1.75;
 
     a {
+        font-family: Satoshi;
         font-size: 1rem;
-        font-family: 'Satoshi';
-        color: var(--text-primary);
         font-weight: 600;
+        color: var(--text-primary);
     }
 }
