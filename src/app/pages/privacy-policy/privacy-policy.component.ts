@@ -5,7 +5,11 @@ import { RouterLink } from '@angular/router';
     selector: 'app-privacy-policy',
     imports: [RouterLink],
     templateUrl: './privacy-policy.component.html',
-    styleUrl: './privacy-policy.component.scss'
+    styleUrls: [
+        './privacy-policy.component.scss',
+        '../../../styles/_article.scss'
+    ]
+
 })
 
 export class PrivacyPolicyComponent {

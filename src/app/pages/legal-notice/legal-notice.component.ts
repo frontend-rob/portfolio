@@ -5,7 +5,10 @@ import { RouterLink } from '@angular/router';
     selector: 'app-legal-notice',
     imports: [RouterLink],
     templateUrl: './legal-notice.component.html',
-    styleUrl: './legal-notice.component.scss'
+    styleUrls: [
+        './legal-notice.component.scss',
+        '../../../styles/_article.scss'
+    ]
 })
 
 export class LegalNoticeComponent {

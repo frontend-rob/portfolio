@@ -1,9 +1,8 @@
 @use "./styles/variables";
-@use "./styles/scrollbar";
 @use "./styles/fonts";
-@use "./styles/buttons";
-@use "./styles/inputs";
 @use "./styles/animations";
+@use "./styles/buttons";
+@use "./styles/scrollbar";
 
 * {
     margin: 0;

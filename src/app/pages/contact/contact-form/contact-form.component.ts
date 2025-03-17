@@ -11,7 +11,10 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
         ReactiveFormsModule
     ],
     templateUrl: './contact-form.component.html',
-    styleUrl: './contact-form.component.scss'
+    styleUrls: [
+        './contact-form.component.scss',
+        '../../../../styles/_inputs.scss'
+    ]
 })
 
 export class ContactFormComponent {

@@ -98,3 +98,28 @@ a {
     font-family: 'Satoshi';
     color: var(--text-primary);
 }
+
+.article-title {
+    font-size: 2.5rem;
+    font-family: 'Clash Display';
+    color: var(--text-primary);
+    text-wrap: balance;
+}
+
+.article-subtitle {
+    font-size: 1.5rem;
+    font-family: 'Clash Display';
+    color: var(--text-primary);
+    text-wrap: balance;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-size: 1rem;
+    font-family: 'Satoshi';
+    color: var(--text-secondary);
+    text-wrap: pretty;
+    line-height: 1.75;
+}
