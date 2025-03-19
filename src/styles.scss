@@ -16,11 +16,13 @@
     background-color: var(--primary);
 }
 
-html,
-body {
-    will-change: scroll-position;
+html {
+    overflow-y: scroll;
     scroll-behavior: smooth;
     overscroll-behavior: none;
+}
+
+body {
     text-rendering: optimizelegibility;
     background-color: var(--bg-base-100);
 }
@@ -49,4 +51,5 @@ app-pokedex {
     flex-direction: column;
     background-color: var(--bg-base-100);
     animation: fade-in-main-content 1000ms ease-in-out;
+    will-change: transform;
 }

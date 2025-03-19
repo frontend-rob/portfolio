@@ -109,3 +109,10 @@
         --timer: 100%;
     }
 }
+
+// loading spinner
+@keyframes spinner {
+    100% {
+        transform: rotate(1turn)
+    }
+}

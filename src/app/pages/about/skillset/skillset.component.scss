@@ -30,6 +30,7 @@
         justify-content: flex-start;
         padding: 0 1.5rem;
         animation: skillset-marquee 40s linear infinite;
+        will-change: transform;
     }
 
     .skill-item {
@@ -54,8 +55,8 @@
 @media screen and (width <= 48rem) {
     .skillset-section {
         .marquee-text {
-            gap: 1.5rem;
-            padding: .5rem .75rem;
+            gap: 1rem;
+            padding: .5rem;
         }
     }
 }

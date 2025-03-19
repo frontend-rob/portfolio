@@ -89,6 +89,7 @@
 .testimonial-icon.active::before,
 .testimonial-icon.active::after {
     animation: draw-border 15s linear forwards;
+    will-change: transform;
 }
 
 .testimonial-icon svg {

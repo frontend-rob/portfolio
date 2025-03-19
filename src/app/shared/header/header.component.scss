@@ -10,6 +10,7 @@ app-header {
     background-color: var(--backdrop);
     backdrop-filter: blur(.75rem);
     animation: fade-in-top-down 500ms ease-in-out;
+    will-change: transform;
 }
 
 .header-content {
@@ -113,10 +114,12 @@ app-header {
 
 .btn-theme #moon-icon {
     animation: dark-toggle-rotate 300ms ease-in-out;
+    will-change: transform;
 }
 
 .btn-theme #sun-icon {
     animation: light-toggle-rotate 300ms ease-in-out;
+    will-change: transform;
 }
 
 @media screen and (width <= 40rem) {

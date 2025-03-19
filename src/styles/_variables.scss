@@ -10,6 +10,7 @@
     --text-secondary: #333;
     --text-inverse: #f8f8f8;
     --backdrop: #f8f8f8ee;
+    --ng-progress-color:#2bb990;
 }
 
 [data-theme="dark"] {
@@ -24,4 +25,5 @@
     --text-secondary: #9ca3af;
     --text-inverse: #0f0f0f;
     --backdrop: #0f0f0fee;
+    --ng-progress-color: #2cc99c;
 }

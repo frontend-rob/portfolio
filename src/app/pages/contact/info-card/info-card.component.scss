@@ -32,6 +32,7 @@
             border-radius: 9999rem;
             background-color: var(--primary);
             animation: pulse 1500ms ease infinite;
+            will-change: transform;
         }
     }
 
