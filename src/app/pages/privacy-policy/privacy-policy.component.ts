@@ -9,7 +9,6 @@ import { RouterLink } from '@angular/router';
         './privacy-policy.component.scss',
         '../../../styles/_article.scss'
     ]
-
 })
 
 export class PrivacyPolicyComponent {
